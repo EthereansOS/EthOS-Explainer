@@ -1,0 +1,110 @@
+@font-face {font-family: BM;src: url(font/Baloo2-SemiBold.otf);font-weight: bold;}
+@font-face {font-family: BM;src: url(font/Baloo2-Bold.otf);font-weight: bolder;}
+@font-face {font-family: BM;src: url(font/Baloo2-Regular.otf);}
+body {margin: 0; text-align: center; font-family: BM;}
+html {background-color: #f4f4f4;}
+a {cursor: url('img/cm.cur'), pointer;}
+a:active {cursor: url('img/cm2.cur'), pointer;}
+header {width: 70%; position: absolute; top: 0px; right: 1%; background-color: transparent; padding: 10px; text-align: right; z-index: 5;}
+header a {font-size: 13px; font-weight: bold; color: #a7a7a7; text-decoration: none; margin: 0 0.7%;cursor: url('img/cm.cur'), pointer;}
+header a:hover {color: #8a44ff;text-decoration: underline;font-weight: bold;}
+header a:active {cursor: url('img/cm2.cur'), pointer;}
+header p {font-size: 12px; font-weight: bolder; color: #8a44ff; display: inline;}
+.mapbtn {color: #ffffff; background-color: #ada3ec; padding: 1px 3px; border-radius: 5px;}
+.mapbtn:hover {color: #ffffff; text-decoration: none;}
+.page {width: 100%; display: inline-block; min-height: 100%; margin: 0 auto;text-align: center ; position: relative;}
+.fancyeffect {width: 100%; min-width: 100%; display: block; position: absolute; top:0; left: 0; z-index: 1;}
+.fancyeffect img {width: 100%; min-width: 100%;display: block;}
+.map {width: 100%; max-width: 1900px; display: inline-block; position: relative; top: 50px; margin: 0 auto; text-align: center; height: 80%;}
+.map2 {height: 200px;z-index: 2;}
+.map a {display: block; text-decoration: none; position: absolute; opacity: 0.8; cursor: url('img/cm.cur'), pointer; z-index: 10;}
+.map p {display: block; text-decoration: none; position: absolute; opacity: 0.8; cursor: default; z-index: 6;}
+.map a:hover {opacity: 1;}
+.map a:active {cursor: url('img/cm2.cur'), pointer;}
+.map .m0 {width: 10%; max-width: 10%; left: 1%; top: -4%; opacity: 1; cursor: default;}
+.map2 .m0 {width: 10%; max-width: 10%; left: 1%; top: -17%;}
+.map .m1 {width: 30%; max-width: 30%; left: 10%; top: -7%;}
+.map .m2 {width: 22%; max-width: 22%; left: 43%; top: 2%;}
+.map .m3 {width: 30%; max-width: 30%; left: 69%; top: 0%;}
+.map .m4 {width: 6%; max-width: 6%; left: 34%; top: 40%; opacity: 1; cursor: default;}
+.map .m5 {width: 11%; max-width: 11%; left: 9%; top: 48%;}
+.map .m6 {width: 11%; max-width: 11%; left: 0%; top: 57%;}
+.map .m7 {width: 6%; max-width: 6%; left: 20%; top: 60%; opacity: 1; cursor: default;}
+.map .m8 {width: 20%; max-width: 20%; left: 30%; top: 54%;}
+.map .m9 {width: 13%; max-width: 13%; left: 52%; top: 46%;}
+.map .m10 {width: 26%; max-width: 26%; left: 66%; top: 55%;}
+.map .m11 {width: 12%; max-width: 12%; left: 62%; top: 45%; opacity: 1; cursor: default;}
+.map .m12 {width: 4%; max-width: 4%; left: 56%; top: 76%; opacity: 1; cursor: default;}
+.map img {width: 100%; min-width: 100%;display: block;}
+.desc {width: 70%; max-width: 900px; display: block; margin: 30px auto;}
+.desc h6 {color: #ada3ec; font-size: 16px; line-height: 1.35;margin-block-end: 0;margin-block-start: 0; font-weight: normal;}
+.desc h5 {color: #ada3ec; font-size: 22px; line-height: 2; font-weight: bolder; margin: 0; margin-block-end: 0;margin-block-start: 0;}
+.expl {width: 100%; display: block; margin: 5px auto;max-width: 1900px; text-align: center;}
+.title {position: relative; display: inline-block; margin-right: 10%; margin-top: 30px; width: 25%; background-color: #ffffff; vertical-align: middle; border-radius: 20px;box-shadow: rgba(0, 0, 0, 0.01) 0px 0px 1px, rgba(0, 0, 0, 0.04) 0px 4px 8px, rgba(0, 0, 0, 0.04) 0px 16px 24px, rgba(0, 0, 0, 0.01) 0px 24px 32px; z-index: 10; text-align: left; padding: 25px 2.3%;z-index: 3;}
+.icon {width: 20%; display: inline-block; margin-block-end: 0; margin-block-start: 0; vertical-align: middle;margin-inline-start: 0px;margin-inline-end: 0px; margin-right: 4%;}
+.icon img {width: 100%;}
+.title h3 {width: 65%; display: inline-block; margin-block-end: 0; margin-block-start: 0; vertical-align: middle;text-align: left; color: #000000; font-weight: bold; font-size: 20px;}
+.title p {font-size: 13px;font-weight: lighter; color: #212121; line-height: 1.5;}
+.link {width: 100%; display: block; text-align: center; margin: 10px auto;}
+.link a {padding: 3px 8px; border-radius: 8px; margin: 5px 5px; background-color: #8a44ff; color: #ffffff; font-weight: normal; font-size: 12px; text-decoration: none; display: inline-block;}
+.island {width: 40%; display: inline-block; vertical-align: middle; position: relative;}
+.island img {width: 100%;}
+.island .iimg2 {width: 80%;}
+.island .iimg3 {width: 50%;}
+.wp {width: 100%; display: block; margin: 80px auto;max-width: 1900px; text-align: center;z-index: 5; position: relative;}
+.wpdesc {width: 55%; max-width: 800px; display: inline-block; padding: 20px 2%;text-align: left;}
+.wpdesc h5 {font-size: 20px; font-weight: bold; color: #292929;margin-block-end: 1em;}
+.wpdesc h2 {font-size: 25px; font-weight: bold; color: #000000;}
+.wpdesc p {font-weight: normal; font-size: 16px;}
+.wpdesc p a {font-weight: bold; color: #292929;}
+.infop {width: 100%; display: block;text-align: center;margin-block-start: 0;margin-block-end: 0;margin-inline-start: 0px;margin-inline-end: 0px;}
+.infop img {width: 98%; display: inline-block;}
+.BannerExp {width: 86%; display: block; margin: 20px auto; padding: 5px 2%; background-color: #ada3ec; border-radius: 12px;}
+.BannerExp p {font-size: 14px; line-height: 1.4; color: #292929; font-weight: normal;}
+.BannerExp a {font-weight: bold; color: #ffffff; text-decoration: underline;}
+.linkBar {width: 98%; display: block; margin: 10px auto; text-align: left;}
+.linkBar a {padding: 3px 8px; border-radius: 8px; margin: 5px 5px; background-color: #8a44ff; color: #ffffff; font-weight: normal; font-size: 14px; text-decoration: none; display: inline-block;}
+.infon1 {width: 100%; display: block;text-align: center;margin-block-start: 0;margin-block-end: 0;margin-inline-start: 0px;margin-inline-end: 0px; margin: 150px auto; max-width: 1000px;}
+.infon1 img {width: 100%; display: inline-block;}
+
+@media only screen and (max-width: 1300px) {
+    .title {width: 32%; margin-right: 6%;}
+}
+
+@media only screen and (max-device-width: 750px) {
+    header a, header p {display: none;}
+    header .mapbtn {display: inline-block;}
+    .map {height: 90%;}
+    .map .m0 {width: 30%; max-width: 30%; left: 1%; top: -3%;}
+    .map2 .m0 {width: 30%; max-width: 30%; left: 1%; top: -30%;}
+    .map .m1 {width: 40%; max-width: 40%; left: auto; right: 10%; top: -7%;}
+    .map .m2 {width: 40%; max-width: 40%; left: 0%; top: 18%;}
+    .map .m3 {width: 40%; max-width: 40%; left: auto; right: 10%; top: 17%;}
+    .map .m4 {width: 10%;max-width: 10%;left: 41%;top: 7%;}
+    .map .m5 {width: 20%;max-width: 20%;left: 6%;top: 44%;}
+    .map .m6 {width: 20%;max-width: 20%;left: 0%;top: 69%;}
+    .map .m7 {width: 15%;max-width: 15%;left: 33%;top: 56%;}
+    .map .m8 {width: 30%;max-width: 30%;left: 30%;top: 38%;}
+    .map .m9 {width: 20%;max-width: 20%;left: auto;top: 37%;right: 10%;}
+    .map .m10 {width: 40%;max-width: 40%;left: auto;top: 55%;right: 5%;}
+    .map .m11 {width: 19%;max-width: 19%;left: 23%;top: 66%;}
+    .map .m12 {width: 12%;max-width: 12%;left: 65%;top: 76%;}
+    .desc {margin: 80px auto 30px auto; width: 90%;}
+    .desc h5 {line-height: 1;}
+    .desc h6 {font-size: 12px;}
+    .infon1 {margin: 10px auto;}
+    .map2 {height: 15%;}
+    .title {width: 80%; margin-right: 0;}
+    .island {width: 80%; margin-block-start:0em;margin-block-end:0em;margin-inline-start: 0px;margin-inline-end: 0px;margin-top: 20px;}
+    .wpdesc {width: 85%;}
+    .wpdesc p {font-size: 13px;}
+    .wp {margin: 30px auto;}
+    
+}
+@media only screen and (min-device-width: 751px) and (max-device-width: 1024px) {
+    .map {height: 46%;}
+    .desc {margin: 80px auto 30px auto;}
+    .infon1 {margin: 10px auto;}
+    .map2 {height: 15%;}
+    .wpdesc {width: 85%;}
+}

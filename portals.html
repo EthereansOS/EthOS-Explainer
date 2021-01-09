@@ -1,0 +1,140 @@
+<html>
+    <!-- This release is made completely in HTML & CSS because is designed to be cheaper in therm of size. In the next release we'll make it based on react.js adding all of the fancy effects needed. -->
+    <head>
+    <meta charset="utf-8" />
+    <title>Ξthereans OS - Portals</title>
+    <meta name="description" content="ΞthOS is an R&D operating system on top of ethereum - A general-purpose platform for anything and everything DeFi, offering a set of factory-contract financial instruments.">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <section class="page">
+            <header>
+                <a class="mapbtn" href="index.html">Map</a>
+                <a href="organizations.html">ORGANIZATIONS</a>
+                <p>UniFi</p>
+                <a href="items.html">ITEMS</a>
+                <a href="equities.html">ETH-Equities</a>
+                <a href="nerv.html">NERV</a>
+                <a href="doc.html">Doc</a>
+                <a href="buidlerberg.html">Buidlerberg</a>
+                <a href="https://discord.gg/nHZ2bUd" target="_blank">Discord</a>
+                <a href="https://github.com/b-u-i-d-l" target="_blank">Github</a>
+            </header>
+            <div class="fancyeffect">
+                <img src="img/background.png">
+            </div>
+            <section class="map map2">
+                <a class="m0" href="index.html">
+                    <img src="img/0.png">
+                </a>
+            </section>
+            <section class="expl">
+                <article class="title">
+                    <figure class="icon">
+                        <img src="img/i7.png">
+                    </figure>
+                    <h3>UniFi</h3>
+                    <br>
+                    <p>A general-purpose platform for anything and everything DeFi, offering a set of factory-contract financial instruments. As people find new ways to use them, they won't need to reinvent anything or deal with the attendant risks.</p>
+                    <p>Equity Token: $UniFi</p> 
+                    <aside class="link">
+                        <a href="https://www.unifihub.com" target="_blank">Dapp</a>
+                        <a href="https://github.com/b-u-i-d-l/unifi" target="_blank">Github</a>
+                        <a href="https://dapp.dfohub.com/?addr=0xbC8E0616A61137E1905adb858963f781934A44eD">DFO</a>
+                        <a href="https://www.unifihub.com/?section=grimoire" target="_blank">Doc</a>
+                        <a href="https://info.uniswap.org/pair/0x04840eaa3497e4c3934698ff88050ceb9893f78f" target="_blank">UniFi</a>
+                    </aside>
+                </article>
+                <figure class="island">
+                    <img src="img/6.png">
+                </figure>
+            </section>
+            <section class="wp">
+                <article class="wpdesc">
+                    <h2>Current Release: Unified Finance (UniFi)</h2>
+                    <h5>A Stable Coin to Pool Them All - uSD V1</h5>
+                    <p>Unified Stable Dollar (uSD v1) is a new stablecoin minted by the magic rainbow of Uniswap stablecoin pools. Backed by the power of the Unicorn, uSD v1 is the most secure stablecoin ever. The only way it could be destabilized is if the entire stablecoin industry crashed.</p>
+                    <h5>Bazar</h5>
+                    <p>Ancient black magic is unleashing the true power of the Unicorn. Programmable Equities, Token Indexes and ITEMs can now be swapped, on the new Bazaar.</p>
+                    <div class="linkBar">
+                        <a href="https://www.unifihub.com/?section=stableCoin" target="_blank">uSD Dapp</a>
+                        <a href="https://www.unifihub.com/?section=swapBazar" target="_blank">Bazar Dapp</a>
+                        <a href="https://www.unifihub.com/" target="_blank">Dapp</a>
+                    </div>
+                    <h2>Upcoming Release: Portals</h2>
+                    <div class="BannerExp">
+                        <p>Note: the name Portals is subject to change before the release of the protocol’s mainnet. <a href="https://discord.gg/67bt7dZ" target="_blank">R&D Discussion</a></p>
+                    </div>
+                    <h5>On-Chain General Purpose AMM Aggregator</h5>
+                    <p>To this end, we’ve already finished the first — and most crucial — phase of development. This was to create a set of general-purpose APIs that allow for any DeFi dApp to be integrated with Portals-standardized AMM functions: Swap, Add Liquidity, and Remove Liquidity</p>
+                    <p>Together, these APIs form part of an “AMM Aggregator” contract, which ensures that any AMM can be implemented with these functions (and other functions in the future).</p>
+                    <p>Let’s take a closer look at how this works.</p>
+                    <figure class="infop">
+                        <img src="img/ig6.png">
+                    </figure>
+                    <p>Swap; Add Liquidity; and Remove Liquidity. These are used in different ways by different AMMs. Uniswap’s router facilitates interaction with liquidity pools; Mooniswap forces you to connect with pools directly; Balancer allows for pools with more than two tokens; and so on.</p>
+                    <p>Because of this diversity, the Aggregator must consider all of the AMMs together. That way, it can find common, cross-AMM rules of behavior, and thus standardize its operations.</p>
+                    <p>The “Liquidity Provider Data” and “Liquidity To Swap Data” APIs enable this, by interacting with liquidity pool addresses to transmit their lists of tokens.</p>
+                    <p>Additionally, every AMM interacts with ETH in a unique way. Uniswap uses WETH and ad-hoc calls, Mooniswap uses the zero address, Balancer doesn’t support it etc. We prefer Mooniswap’s approach, and have adopted it for the Liquidity Provider Data. For the Liquidity To Swap Data, there are specific flags when the swap involves ETH in the entrance or in the exit.</p>
+                    <p>The Orchestrator is the extendible knowledge base that keeps track of all the supported AMMs. It works as an upgradable plugin system; there can be multiple plugins for one AMM, but every one will have a different version number and the associated upgraded features and bug fixes.</p>
+                    <figure class="infop">
+                        <img src="img/ig7.png">
+                    </figure>
+                    <p>To begin with, the AMM Aggregator will deal with Uniswap v2, Mooniswap v1 and Balancer v1. However, anyone can code and propose an interface for any other AMM anytime, which if accepted can interact with any Portals v2 function.</p>
+                    <div class="linkBar">
+                        <a href="https://github.com/b-u-i-d-l/amm-aggregator-api" target="_blank">AMM Aggregator Github</a>
+                    </div>
+                    <h5>uSD v2</h5>
+                    <p>The second version of the Unified State Dollar is coming soon. Built on top of the ethItem standard, it will not only be the most secure stablecoin on the market, but also reward holders.</p>
+                    <p><b>Stablecoin Farming & Fee Earnings For Holders</b></p>
+                    <p>v2 has multi-AMM compatibility; a staking position can provide liquidity to multiple AMMs!And by farming uSD in some tiers, you’ll both farm other stablecoins and earn uSD from trading fees; v1 fees are all sent to the UniFi DFO, but v2 fees will be split between the ethPortal DFO and v2 holders. This is the first time in Ethereum history you’ll be able to farm a stablecoin. (We think. If you ever have before, please embarrass us by posting the dApp in Discord.)</p>
+                    <p>The relevant tiers will consist of (two stablecoins) + uSD, at a rate of 1 uSD = 1 stablecoin. The fees will be collateralized as uSD to ensure its supply stays = that of the stablecoins backing it.</p>
+                    <h5>General Purposes Liquidity Mining (Farming) Contracts</h5>
+                    <p>The new contracts will be highly flexible. Anyone will be able to use them: DFOs / ECOs, DAOs — even wallets. They will have programmable reward systems governable tiers of whitelisted tokens. And they’ll be far simpler to use than previous DFOhub staking contracts. These contracts will enable two different farming approaches:</p>
+                    <p><b>Free Farming</b></p>
+                    <p>Open-ended; block-based rewards shared among all farmers.</p>
+                    <p><b>Locked Farming</b></p>
+                    <p>Positions locked (:o) for specific periods; precise guaranteed rewards; limited availability.</p>
+                    <p><b>Inflation Load Balancer</b></p>
+                    <p>Any contract will be able to take both approaches at once. This will be managed by the Inflation Load Balancer, which does exactly what it sounds like.</p>
+                    <figure class="infop">
+                        <img src="img/ig8.png">
+                    </figure>
+                    <p><b>Example: $HEWWO Farming Contract</b></p>
+                    <p>Monthly Inflation: 10,000</p>
+                    <p>Share allocated to free farming: 20% (2,000 $hewwo / month; 0.01 $hewwo / block) </p>
+                    <p>Shares allocated to locked farming: [1] 30% (3,000 $hewwo / month; 0.015 $hewwo / block 3 months period) [2] 50% (5,000 $hewwo / month; 0.026 $hewwo/ block 1 year period) </p>
+                    <p>For as long as the 3 Month and the 1 Year locked positions are completely empty, free farming rewards will be 10,000 $hewwo / month (0.052 $hewwo / block); as the locked positions begin to fill, the free farming rewards will decrease pro rata, until they hit the preset floor of 2,000 $hewwo / month (0.01 $hewwo / block).</p>
+                    <p>Indexes will be an experimental DeFi instrument for diffusing risk among several volatile assets. And since they’ll represent every ethOS ECO at once, you’ll be able to use them to govern any.</p>
+                    <h5>General-Purpose Liquidity Inflation Manager</h5>
+                    <p>v1 Fixed Inflation has proven an innovative mechanism for startups to accumulate funds, allowing them to bypass problematic methods like ICOs and presales.</p>
+                    <p>Using the upcoming general-purpose contracts, anyone (DAOs, DFOs, static smart contract extensions and wallets) can host governable fixed inflation systems with preset rules. </p>
+                    <p>Powered by Portals's AMM Aggregator, these contracts will have multi-AMM functionality and will be able to inflate both by Treasury or by Mint.</p>
+                    <h5>General Purposes Liquidity Crafting</h5>
+                    <p>Uniswap and most of the AMMs allows for liquidity pools composed of 50:50 asset ratios. This is usually the most secure setup for an AMM, but disincentivizes liquidity provision by incurring impermanent losses. Crafting resolves this, and opens up novel financial use cases for Uniswap pools. It is a fancy new way to build liquidity together, without needing to trust and know each other.Anyone can create a Craft order, customize the liquidity setup and deploy it by contributing some of the liquidity. Others can then contribute the rest required to pool the order on Uniswap. Later, after the predetermined block, any of the participants can trigger removal of the liquidity. It is then distributed to all order participants based on the predetermined rules.</p>
+                    <div class="linkBar">
+                        <a href="https://www.unifihub.com/?section=grimoire#grimCraft" target="_blank">Crafting Explainer</a>
+                    </div>
+                    <h5>Item Index Generator</h5>
+                    <p>Using Portals, you will be able to create Item Indexes. Using fixed rules, you will mint tokens to use as backing collateral for an Index. These tokens will already be based on the Item standard, and it will be easy for ECOs to incorporate them into their voting systems.</p>
+                    <p>Example:</p>
+                    <p>Mint an Index Item by locking 50 $UniFi, 20 $BUIDL and 10 $ARTE as collateral.</p>
+                    <div class="linkBar">
+                        <a href="https://discord.gg/nHZ2bUd" target="_blank">R&D Channel</a>
+                        <a href="https://twitter.com/dfohub" target="_blank">Twitter</a>
+                    </div>
+                    <h2>UniFi Organization</h2>
+                    <p>UniFi is a Decentralized Flexible Organization (DFO) that researches and develops a responsible Decentralized Finance layer on top of Uniswap. Thanks to the DFOhub standard, UniFi dApps are entirely independent from any off-chain entity. The $UniFi voting token is a programmable equity of the UniFi DFO; $UniFi holders hold real equity of the protocol, and rule every part of its code and assets.</p> 
+                    <p>The UniFi DFO earn from The uSD positive rebalance (the trading fees of Uniswap collateralized stablecoins). Portal will earn small fees (0.001% to 0.05% | 0% until the ECO update) by positions in Farming, Crafting, Fixed Inflation and a portion of the positive rebalance of the uSD v2.</p>
+                    <div class="linkBar">
+                        <a href="https://dapp.dfohub.com/?addr=0xbC8E0616A61137E1905adb858963f781934A44eD" target="_blank">UniFi Organization</a>
+                        <a href="https://info.uniswap.org/pair/0x04840eaa3497e4c3934698ff88050ceb9893f78f" target="_blank">UniFi Token</a>
+                    </div>
+                </article>
+            </section>
+        </section>
+    </body>
+</html>

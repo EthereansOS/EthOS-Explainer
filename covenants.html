@@ -13,16 +13,17 @@
         <section class="page">
             <header>
                 <a class="mapbtn" href="index.html">Map</a>
-                <a href="organizations.html">ORGANIZATIONS</a>
+                <a href="organizations.html">Organizations</a>
                 <p>Covenants</p>
                 <a href="items.html">ITEMS</a>
-                <a href="equities.html">ETH-Equities</a>
+                <a href="equities.html">Equities</a>
                 <a href="nerv.html">NERV</a>
                 <a href="wimd.html">WIMD</a>
                 <a href="doc.html">Doc</a>
                 <a href="buidlerberg.html">Buidlerberg</a>
                 <a href="https://discord.gg/nHZ2bUd" target="_blank">Discord</a>
                 <a href="https://github.com/b-u-i-d-l" target="_blank">Github</a>
+                <a href="https://form.typeform.com/to/qvSoOxs4" target="_blank"><b>JOIN NERV</b></a>
             </header>
             <div class="fancyeffect">
                 <img src="img/background.png">
@@ -39,7 +40,7 @@
                     </figure>
                     <h3>Covenants</h3>
                     <br>
-                    <p>A general-purpose platform for anything and everything DeFi, offering a set of factory-contract financial instruments. As people find new ways to use them, they won't need to reinvent anything or deal with the attendant risks.</p>
+                    <p>Covenants is the ethOS platform for anything and everything DeFi. It offers a wide-ranging set of factory-standard general-purpose contracts. As people find new ways to use them, they won’t need to reinvent anything.</p>
                     <p>Equity Token: $UniFi</p> 
                     <aside class="link">
                         <a href="https://covenants.eth.link" target="_blank">Dapp</a>
@@ -47,6 +48,7 @@
                         <a href="https://dapp.dfohub.com/?addr=0xeFAa6370A2ebdC47B12DBfB5a07F91A3182B5684">DFO</a>
                         <a href="https://covenants.eth.link/#/grimoire" target="_blank">Doc</a>
                         <a href="https://info.uniswap.org/pair/0x04840eaa3497e4c3934698ff88050ceb9893f78f" target="_blank">UniFi</a>
+                        <a href="https://covenants.eth.link/#/farm/dapp/0x37Bc927d6aa94F1d3E4441CF7368e4C3df72241B" target="_blank">Farm UniFi</a>
                     </aside>
                 </article>
                 <figure class="island">
@@ -55,71 +57,109 @@
             </section>
             <section class="wp">
                 <article class="wpdesc">
-                    <h2>Current Release: Covenants</h2>
-                    <h5>On-Chain General Purpose AMM Aggregator</h5>
-                    <p>To this end, we’ve already finished the first — and most crucial — phase of development. This was to create a set of general-purpose APIs that allow for any DeFi dApp to be integrated with Covenants-standardized AMM functions: Swap, Add Liquidity, and Remove Liquidity</p>
-                    <p>Together, these APIs form part of an “AMM Aggregator” contract, which ensures that any AMM can be implemented with these functions (and other functions in the future).</p>
-                    <p>Let’s take a closer look at how this works.</p>
-                    <figure class="infop">
-                        <img src="img/ig6.png">
-                    </figure>
-                    <p>Swap; Add Liquidity; and Remove Liquidity. These are used in different ways by different AMMs. Uniswap’s router facilitates interaction with liquidity pools; Mooniswap forces you to connect with pools directly; Balancer allows for pools with more than two tokens; and so on.</p>
-                    <p>Because of this diversity, the Aggregator must consider all of the AMMs together. That way, it can find common, cross-AMM rules of behavior, and thus standardize its operations.</p>
-                    <p>The “Liquidity Provider Data” and “Liquidity To Swap Data” APIs enable this, by interacting with liquidity pool addresses to transmit their lists of tokens.</p>
-                    <p>Additionally, every AMM interacts with ETH in a unique way. Uniswap uses WETH and ad-hoc calls, Mooniswap uses the zero address, Balancer doesn’t support it etc. We prefer Mooniswap’s approach, and have adopted it for the Liquidity Provider Data. For the Liquidity To Swap Data, there are specific flags when the swap involves ETH in the entrance or in the exit.</p>
-                    <p>The Orchestrator is the extendible knowledge base that keeps track of all the supported AMMs. It works as an upgradable plugin system; there can be multiple plugins for one AMM, but every one will have a different version number and the associated upgraded features and bug fixes.</p>
+                    <h2>Current Release</h2>
+                    <div class="BannerExp">
+                        <p>What follows is a significantly abridged version of the Covenants Grimoire. To read the full thing, head to <a target="_blank" href="https://covenants.eth.link/#/grimoire">https://covenants.eth.link/#/grimoire</a>. Covenants is a <a href="#Org">Decentralized Flexible Organization (DFO)</a>, $UniFi is its voting token (programmable equity).</p>
+                    </div>
+                    <h5>The Aggregator</h5>
+                    <p>At the heart of every Covenant is the Aggregator. By liberating on-chain AMM aggregation, it allows any wallet, DAPP, DFO, DAO or customized smart contract to farm, conduct token inflation, multi-swap, arbitrage, craft liquidity, collateralize stablecoins and more across multiple AMMs at once.</p>
+                    <p>It is the first ever truly on-chain AMM aggregator.</p>
                     <figure class="infop">
                         <img src="img/ig7.png">
                     </figure>
-                    <p>To begin with, the AMM Aggregator will deal with Uniswap v2, Mooniswap v1 and Balancer v1. However, anyone can code and propose an interface for any other AMM anytime, which if accepted can interact with any Covenants function.</p>
+                    <p>The Orchestrator is the extendible knowledge base that keeps track of all the supported AMMs. It works as an upgradable plugin system; there can be multiple plugins for one AMM, but every one will have a different version number and the associated upgraded features and bug fixes.</p>
+                    <figure class="infop">
+                        <img src="img/ig6.png">
+                    </figure>
                     <div class="linkBar">
                         <a href="https://github.com/b-u-i-d-l/amm-aggregator-api" target="_blank">AMM Aggregator Github</a>
+                        <a href="https://covenants.eth.link/#/more" target="_blank">Supported AMMs</a>
                     </div>
-                    <h5>Wrapped USD $WUSD</h5>
-                    <p>The Wrapped USD is coming soon. Built on top of the ethItem standard, it will not only be the most secure stablecoin on the market, but also reward holders.</p>
-                    <p><b>Stablecoin Farming & Fee Earnings For Holders</b></p>
-                    <p>v2 has multi-AMM compatibility; a staking position can provide liquidity to multiple AMMs!And by farming WWUSD in some tiers, you’ll both farm other stablecoins and earn WUSD from trading fees; v1 fees are all sent to the Covenants DFO, but v2 fees will be split between the ethPortal DFO and v2 holders. This is the first time in Ethereum history you’ll be able to farm a stablecoin. (We think. If you ever have before, please embarrass us by posting the dApp in Discord.)</p>
-                    <p>The relevant tiers will consist of (two stablecoins) + WUSD, at a rate of 1 WUSD = 1 stablecoin. The fees will be collateralized as WUSD to ensure its supply stays = that of the stablecoins backing it.</p>
-                    <h5>General Purposes Liquidity Mining (Farming) Contracts</h5>
-                    <p>The new contracts will be highly flexible. Anyone will be able to use them: DFOs / ECOs, DAOs — even wallets. They will have programmable reward systems governable tiers of whitelisted tokens. And they’ll be far simpler to use than previous DFOhub staking contracts. These contracts will enable two different farming approaches:</p>
-                    <p><b>Free Farming</b></p>
-                    <p>Open-ended; block-based rewards shared among all farmers.</p>
-                    <p><b>Locked Farming</b></p>
-                    <p>Positions locked (:o) for specific periods; precise guaranteed rewards; limited availability.</p>
-                    <p><b>Inflation Load Balancer</b></p>
-                    <p>Any contract will be able to take both approaches at once. This will be managed by the Inflation Load Balancer, which does exactly what it sounds like.</p>
+                    <figure class="infopWMIDCARD">
+                        <img src="img/WUSDx.png">
+                        <div class="infopWMIDCARDGG">
+                            <h5><b>$WUSD ~ Wrapped USD</b></h5>
+                            <p>One stablecoin to pool them all, in all the pools of DeFi.</p> 
+                            <p>$WUSD is minted by collateralizing pairs of whitelisted stablecoins in the pools of whitelisted AMMs.</p>
+                            <div class="linkBar">
+                                <a href="https://item.eth.link/?interoperable=0xD15c7Fcda27a93b9d4cD3617E09416Ec3aaA5237" target="_blank">ITEMS Collection</a>
+                                <a href="https://opensea.io/assets/0x5a6EdeeE783A17AFa9e40f6a03B6C93Fabc5AdC1/1195241872894617222008635817406839094575782056503" target="_blank">WUSD</a>
+                                <a href="https://opensea.io/assets/0x5a6EdeeE783A17AFa9e40f6a03B6C93Fabc5AdC1/1195241872894617222008635817406839094575782056503" target="_blank">2xUSD</a>
+                                <a href="https://opensea.io/assets/0x5a6EdeeE783A17AFa9e40f6a03B6C93Fabc5AdC1/1195241872894617222008635817406839094575782056503" target="_blank">5xUSD</a>
+                            </div>
+                        </div>
+                    </figure>
+                    <p>By decentralizing the distribution of its collateral, and capable of rebalancing it for stability, $WUSD is not vulnerable to any single point of failure. Governed by $UniFi holders via the Covenants DFO, it cannot be censored or manipulated by any issuer, state or other off-chain centralized entity. It is as unstoppable as Ethereum itself.</p>
+                    <figure class="infop">
+                        <img src="img/ig11.png">
+                    </figure>
+                    <p>It is also the first ever farmable stablecoin.</p>
+                    <div class="linkBar">
+                        <a href="https://covenants.eth.link/#/wusd/dapp" target="_blank">Mint/Burn WUSD</a>
+                        <a href="https://covenants.eth.link/#/grimoire" target="_blank">WUSD Explainer</a>
+                        <a href="https://covenants.eth.link/#/farm/dapp/0x0c0a8F2b7dACB9Efe8b805fd77D08363A74A208A" target="_blank">Farm WUSD</a>
+                    </div>
+                    <h5>Covenants Farming</h5>
+                    <p>Ethereans love to farm. They do it all day and night—apes, penguins & wizards alike. But farms in DeFi are not always well-managed, and the hard-earned harvests of farmers are often at risk. Covenant farming contracts allow us to farm safely, on our own terms and across multiple AMMs at once. Anyone can create, host or stake positions in free and locked setups without having to trust anyone.</p>
                     <figure class="infop">
                         <img src="img/ig8.png">
                     </figure>
-                    <p><b>Example: $HEWWO Farming Contract</b></p>
-                    <p>Monthly Inflation: 10,000</p>
-                    <p>Share allocated to free farming: 20% (2,000 $hewwo / month; 0.01 $hewwo / block) </p>
-                    <p>Shares allocated to locked farming: [1] 30% (3,000 $hewwo / month; 0.015 $hewwo / block 3 months period) [2] 50% (5,000 $hewwo / month; 0.026 $hewwo/ block 1 year period) </p>
-                    <p>For as long as the 3 Month and the 1 Year locked positions are completely empty, free farming rewards will be 10,000 $hewwo / month (0.052 $hewwo / block); as the locked positions begin to fill, the free farming rewards will decrease pro rata, until they hit the preset floor of 2,000 $hewwo / month (0.01 $hewwo / block).</p>
-                    <p>Indexes will be an experimental DeFi instrument for diffusing risk among several volatile assets. And since they’ll represent every ethOS ECO at once, you’ll be able to use them to govern any.</p>
-                    <h5>General-Purpose Liquidity Inflation Manager</h5>
-                    <p>v1 Fixed Inflation has proven an innovative mechanism for startups to accumulate funds, allowing them to bypass problematic methods like ICOs and presales.</p>
-                    <p>Using the upcoming general-purpose contracts, anyone (DAOs, DFOs, static smart contract extensions and wallets) can host governable fixed inflation systems with preset rules. </p>
-                    <p>Powered by Covenants's AMM Aggregator, these contracts will have multi-AMM functionality and will be able to inflate both by Treasury or by Mint.</p>
-                    <h5>General Purposes Liquidity Crafting</h5>
-                    <p>Uniswap and most of the AMMs allows for liquidity pools composed of 50:50 asset ratios. This is usually the most secure setup for an AMM, but disincentivizes liquidity provision by incurring impermanent losses. Crafting resolves this, and opens up novel financial use cases for Uniswap pools. It is a fancy new way to build liquidity together, without needing to trust and know each other.Anyone can create a Craft order, customize the liquidity setup and deploy it by contributing some of the liquidity. Others can then contribute the rest required to pool the order on Uniswap. Later, after the predetermined block, any of the participants can trigger removal of the liquidity. It is then distributed to all order participants based on the predetermined rules.</p>
                     <div class="linkBar">
-                        <a href="https://covenants.eth.link/#/crafting" target="_blank">Crafting Explainer</a>
+                        <a href="https://covenants.eth.link/#/farm/dapp/" target="_blank">Farm</a>
+                        <a href="https://covenants.eth.link/#/grimoire" target="_blank">Farming Explainer</a>
                     </div>
-                    <h5>Item Index Generator</h5>
-                    <p>Using Covenants, you will be able to create Item Indexes. Using fixed rules, you will mint tokens to use as backing collateral for an Index. These tokens will already be based on the Item standard, and it will be easy for ECOs to incorporate them into their voting systems.</p>
-                    <p>Example:</p>
-                    <p>Mint an Index Item by locking 50 $UniFi, 20 $BUIDL and 10 $ARTE as collateral.</p>
+                    <h5>Covenants Inflation</h5>
+                    <p>Covenant inflation contracts allow Ethereans to fund their magical projects in a fair and secure way. Anyone can set one up to circulate any variety of tokens at fixed intervals via minting, swapping and transferring.</p>
+                    <p>With Covenant inflation, you don’t have to worry about needing to solicit any kind of investor anymore. </p>
+                    <figure class="infop">
+                        <img src="img/ig12.png">
+                    </figure>
+                    <div class="linkBar">
+                        <a href="https://covenants.eth.link/#/inflation/dapp" target="_blank">Inflation</a>
+                        <a href="https://covenants.eth.link/#/grimoire" target="_blank">Inflation Explainer</a>
+                    </div>
+                    <h5>Covenants Index Tokens</h5>
+                    <p>Covenant indexes are Items, which have the synthesized properties of erc20s, 721s and erc1155. They are thus interoperable with the entire Ethereum ecosystem. Using the Bazar dApp on the Covenants frontend, anyone can mint one by collateralizing any fixed set of Ethereum tokens, and anyone can burn one to unlock that collateral.</p>
+                    <figure class="infop">
+                        <img src="img/ig10.png">
+                    </figure>
+                    <div class="linkBar">
+                        <a href="https://covenants.eth.link/#/bazaar/dapp" target="_blank">Indexes</a>
+                        <a href="https://covenants.eth.link/#/grimoire" target="_blank">Indexes Explainer</a>
+                    </div>
+                    <h2>Next Release</h2>
+                    <h5>Multi Swaps</h5>
+                    <p>Using the Covenants UI or with a standalone smart contract, conduct cross-AMM multi-swaps (i.e, semi- batch swaps) of ERC20s in a single transaction.</p>
+                    <h5>Cross-AMM Arbitrage</h5>
+                    <p>Using the Covenants UI or with a standalone smart contract, conduct cross-AMM arbitrage.</p>
+                    <h5>General Purpose Liquidity Crafting</h5>
+                    <p>Covenant wizards have made a breakthrough in the science of liquidity, and Etherereans can now Craft it at the molecular level. A crack team of entrepreneurial penguins have already used this discovery to innovate Craftable Initial Liquidity Offerings (ILOs). Projects can use ILOs to provide initial liquidity for tokens with deep customization and security.</p>
+                    <p>They will be publishing their latest findings soon. In the meantime, you can read their preliminary report in the beta Grimoire at unifihub.com</p>
+                    <h5>Smart Indexes</h5>
+                    <p>Smart Covenant index tokens feature special permissions that allow hosts to rebalance the weightings of their collateral using condition-triggered oracles and arbitrage choices.</p>
+                    <h5>The Magician Instrumentality Project</h5>
+                    <p>The M.I.P is a top secret project for the future of Ethereans. The NERV team is working hard behind the scenes to develop an enigma that will catalyze a paradigm shift in Decentralized Finance.</p>
+                    <p>Don’t worry, though. There are no Third Impact risks this time.</p>
                     <div class="linkBar">
                         <a href="https://discord.gg/nHZ2bUd" target="_blank">R&D Channel</a>
                         <a href="https://twitter.com/dfohub" target="_blank">Twitter</a>
                     </div>
-                    <h2>UniFi Organization</h2>
-                    <p>UniFi is a Decentralized Flexible Organization (DFO) that researches and develops a responsible Decentralized Finance layer on top of Uniswap. Thanks to the DFOhub standard, Covenants dApps are entirely independent from any off-chain entity. The $UniFi voting token is a programmable equity of the Covenants DFO; $UniFi holders hold real equity of the protocol, and rule every part of its code and assets.</p> 
-                    <p>The Covenants DFO earn from The WUSD positive rebalance (the trading fees of Uniswap collateralized stablecoins). Portal will earn small fees (0.001% to 0.05% | 0% until the ECO update) by positions in Farming, Crafting, Fixed Inflation and a portion of the positive rebalance of the WUSD v2.</p>
+                    <h2 id="Org">The Covenants Decentralized Flexible Organization (DFO)</h2>
+                    <p>The Covenants platform is ruled via the Covenants DFO by holders of $UniFi, the programmable equity of the DFO. They have exclusive ownership of the protocol, and govern all of its assets and every line of its code.</p> 
+                    <p>The DFO is dedicated to researching, developing and governing a responsible Decentralized Finance protocol on Ethereum. Like all DFOs, it operates 100% on-chain and is completely independent from any centralized entity.</p>
+                    <p><b>Earnings</b></p>
+                    <p>The DFO earns from a few fees. After DFOhub upgrades to v0.5, $UniFi holders will be able to govern these fees using the subDAO system.</p>
+                    <p><b>Active fees</b></p>
+                    <p>8% of $WUSD Credit Rebalancing</p>
+                    <p><b>(Presently) inactive fees</b></p>
+                    <p>0.005% to 0.05% for unstaking farming positions</p>
+                    <p>0.005% to 0.05% for Inflation operation executions</p>
+                    <p>More will be introduced in the future as more functionalities are rolled out.</p>
                     <div class="linkBar">
                         <a href="https://dapp.dfohub.com/?addr=0xeFAa6370A2ebdC47B12DBfB5a07F91A3182B5684" target="_blank">Covenants Organization</a>
                         <a href="https://info.uniswap.org/pair/0x04840eaa3497e4c3934698ff88050ceb9893f78f" target="_blank">UniFi Token</a>
+                        <a href="https://covenants.eth.link/#/farm/dapp/0x37Bc927d6aa94F1d3E4441CF7368e4C3df72241B" target="_blank">Farm UniFi</a>
+                        <a href="https://form.typeform.com/to/qvSoOxs4" target="_blank">Join NERV</a>
                     </div>
                 </article>
             </section>
